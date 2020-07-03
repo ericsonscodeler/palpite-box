@@ -6,12 +6,19 @@ const Index = () => {
         <div>
             <h1>Olá Semana FullStack Master !</h1>
             <div>
-                <Link href='about'>
-                    <a>About !</a>
-                </Link>
-                <Link href='contact'>
-                    <a>contact</a>
-                </Link>   
+                    <Link href='/about'>
+                        <a>About !</a>
+                    </Link>
+                <div>
+                    <Link href='/contact'>
+                        <a>Contact</a>
+                    </Link>
+                </div>
+                <div>
+                    <Link href='/search'>
+                        <a>Search</a>
+                    </Link>
+                </div>     
             </div>
         </div>
     )
