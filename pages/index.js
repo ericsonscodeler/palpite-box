@@ -22,7 +22,7 @@ const Index = () => {
             { !data && <p>Carregando...</p>}
             { data && data.showCoupon &&
             <p className='my-12 text-center'>
-                Mensagem do desconto
+                {data.message}
             </p>
             }
         </div>
