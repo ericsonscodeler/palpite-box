@@ -14,17 +14,19 @@ const Header = () => {
       </div>
 
       <div className='bg-gray-300 p-4 shadow-md text-center'>
+        <Link href='/search'>
+          <a className='px-2 hover:underline'>Pesquisa</a>
+        </Link>
+
         <Link href='/about'>
-          <a className='px-2 hover:underline'>About !</a>
+          <a className='px-2 hover:underline'>Sobre</a>
         </Link>
 
         <Link href='/contact'>
-          <a className='px-2 hover:underline'>Contact</a>
+          <a className='px-2 hover:underline'>Contato</a>
         </Link>
 
-        <Link href='/search'>
-          <a className='px-2 hover:underline'>Search</a>
-        </Link>
+        
       </div>
     </React.Fragment>
   ) 

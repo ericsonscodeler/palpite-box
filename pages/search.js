@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import Head from 'next/head'
+import PageTitle from '../components/pageTitle'
 
 const Search = () => {
 
@@ -39,9 +39,7 @@ const Search = () => {
   }
   return (
     <div className='pt-6'>
-      <Head>
-        <title>Pesquisa</title>
-      </Head>
+      <PageTitle title='Pesquisa'/>
       <h1 className='text-center font-bold my-4 text-2xl'>
         Críticas e sugestões
       </h1>
@@ -66,13 +64,16 @@ const Search = () => {
           Nota:
         </label>
         <div className='flex py-6'>
-        {notas.map(nota =>{
-          return (
-          <label className='block w-1/6 text-center'>{nota} <br/>
-            <input type='radio' name='Nota' value={nota} onChange={onChange}/>
-          </label>)
-        })}
-        </div>
+        {notas.map(nota => {
+            return (
+              <label className='block w-1/6 text-center'>
+                {nota}<br />
+                <input type='radio' name='Nota' value={nota} onChange={onChange} />
+              </label>
+            )
+          })
+          }
+          </div>
         <button className='bg-blue-400 px-12 py-4 font-bold rounded-lg shadow-lg hover:shadow'onClick={save}>Salvar</button>
         </div> }
 
