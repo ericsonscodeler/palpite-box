@@ -30,21 +30,21 @@ export default async(req,res) =>{
       Promo = textCell.value
     }
 
-
-
-
-    // Nome	Email	Whatsapp	Cupom	Promo
     await sheet.addRow({
       Nome: data.Nome,
       Email: data.Email,
       Whatsapp: data.Whatsapp,
-      Nota: 5,
+      Nota: parseInt(data.Nota),
       'Data Preenchimento': moment().format('DD/MM/YYYY HH:mm:ss'),
       Cupom,
       Promo
     })
 
-    res.end(req.body)
+    res.end(JSON.stringify({
+      showCoupon: Cupom !== '',
+      Cupom,
+      Promo
+    }))
   }catch(err){
     console.log(err)
     res.end('error')
